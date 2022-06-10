@@ -13,6 +13,8 @@ jobs:
             VCS_REF=${{ github.sha }}
           load: true
           tags: cs50/codespace:${{ github.sha }},cs50/codespace:latest
+          cache-from: type=registry,ref=cs50/codespace:buildcache
+          cache-to: type=registry,ref=cs50/codespace:buildcache,mode=max
 
       - name: Log into Docker Hub
         uses: docker/login-action@v2
