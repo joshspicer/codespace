@@ -1,4 +1,4 @@
-FROM cs50/cli:amd64
+FROM cs50/cli:amd64-jammy
 ARG DEBIAN_FRONTEND=noninteractive
 
 
